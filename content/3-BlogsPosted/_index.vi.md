@@ -10,7 +10,7 @@ Phần này giới thiệu các bài kỹ thuật được chọn từ **AWS Bui
 
 ### [Blog 1 – Kiro Workflows và quy trình đưa thay đổi lên staging](3.1-Blog1/)
 
-Bài viết của Poobalan P minh họa cách chuyển một GitHub issue thành pull request nháp đã qua kiểm tra, rồi xác minh thay đổi trên staging.
+Bài viết của [Poobalan P](https://builder.aws.com/community/@poobalan1210) minh họa cách chuyển một GitHub issue thành pull request nháp đã qua kiểm tra, rồi xác minh thay đổi trên staging.
 
 ### [Blog 2 – Điều phối đa agent và RAG đa tenant với Amazon Bedrock AgentCore](3.2-Blog2/)
 

@@ -10,7 +10,7 @@ This section highlights technical articles from **AWS Builder Center** and origi
 
 ### [Blog 1 – Kiro Workflows and the path to staging](3.1-Blog1/)
 
-Poobalan P demonstrates how a workflow takes a GitHub issue through implementation and review to a draft pull request and a staging check.
+[Poobalan P](https://builder.aws.com/community/@poobalan1210) demonstrates how a workflow takes a GitHub issue through implementation and review to a draft pull request and a staging check.
 
 ### [Blog 2 – Multi-Agent Orchestration and Multi-Tenant RAG with Amazon Bedrock AgentCore](3.2-Blog2/)
 

@@ -8,7 +8,7 @@ pre: " <b> 3.1. </b> "
 
 # Kiro Workflows: hand off an issue, get back a reviewed PR on staging
 
-- **Original author** Poobalan P
+- **Original author** [Poobalan P](https://builder.aws.com/community/@poobalan1210)
 - **Source** AWS Builder Center
 - **Published** November 17, 2026
 

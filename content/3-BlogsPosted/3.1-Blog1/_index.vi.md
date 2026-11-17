@@ -8,7 +8,7 @@ pre: " <b> 3.1. </b> "
 
 # Kiro Workflows — Từ GitHub issue đến pull request đã review trên staging
 
-- **Tác giả bài gốc** Poobalan P
+- **Tác giả bài gốc** [Poobalan P](https://builder.aws.com/community/@poobalan1210)
 - **Nguồn** AWS Builder Center
 - **Ngày đăng** 17/11/2026
 
