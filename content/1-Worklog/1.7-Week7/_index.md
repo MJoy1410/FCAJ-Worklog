@@ -1,57 +1,31 @@
 ---
 title: "Week 7 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 7** — AWS databases and in-memory caching
 
-### Week 7 Objectives:
+### Week 7 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Choose a relational or NoSQL database based on data relationships, transactions, and access patterns.
+- Analyze the SQL and DynamoDB operations in the course demonstration.
+- Explain the roles of caching, purpose-built databases, and backups.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Choosing a database for the workload**<ul><li>Use a coffee shop loyalty program to identify the customer, purchase, and points records that need to be stored.</li><li>List common reads and writes before selecting a service. Relate this to the connections among accounts, projects, and applications in Tindy, and explain how access patterns shape the data model.</li></ul> | Oct 26, 2026 | Oct 26, 2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Databases |
+| Tuesday | **SQL, Amazon RDS, and Amazon Aurora**<ul><li>Review tables, primary and foreign keys, and SQL transactions. Use a recruitment update to explain why several related changes must stay consistent.</li><li>Compare self-managed databases on EC2 with Amazon RDS and Aurora. Identify remaining application responsibilities, including schema and access control, and review how backups and point-in-time recovery support operations.</li></ul> | Oct 27, 2026 | Oct 27, 2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — Relational Database Services |
+| Wednesday | **Amazon DynamoDB and NoSQL access patterns**<ul><li>Distinguish tables, items, and attributes. Identify the partition key and decide when a sort key is useful for storing multiple items under it.</li><li>Outline how the chosen key supports listing a customer's orders. Compare single-Region access with a workload that needs reads and writes in multiple Regions to understand the role of DynamoDB Global Tables.</li></ul> | Oct 28, 2026 | Oct 28, 2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — NoSQL Database Services |
+| Thursday | **Reviewing the RDS and DynamoDB demonstration**<ul><li>Follow the RDS MySQL demo from database and table creation through inserting rows and using JOIN to read related records.</li><li>Compare this with the DynamoDB demo that creates a table and adds items through the SDK. Contrast a key-based Query with a table Scan and explain how that affects the amount of data read. Note the resources to check if repeating the demo.</li></ul> | Oct 29, 2026 | Oct 29, 2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — AWS Databases Demonstration |
+| Friday | **Caching and purpose-built databases**<ul><li>Diagram cache hits and misses between the API, ElastiCache, and RDS. Consider cache lifetime and the risk of serving stale data after an update.</li><li>Match DocumentDB to document data, Neptune to graph relationships, DAX to accelerating DynamoDB reads, and Managed Blockchain to a distributed ledger use case. Relate AWS Backup to recovery from a backup point.</li></ul> | Oct 30, 2026 | Oct 30, 2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — In-Memory Caching Services<br>06 — Additional Database Services |
 
-### Week 7 Achievements:
+### Week 7 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Query patterns, relationships, and transaction requirements guide service and key design.
+- The course demo illustrates the difference between RDS JOIN operations and DynamoDB Query and Scan.
+- Caching reduces direct database reads. Backup policies and recovery checks address data protection.

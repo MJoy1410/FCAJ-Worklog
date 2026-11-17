@@ -1,57 +1,30 @@
 ---
 title: "Week 5 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 5** — Amazon VPC, network security, and global networking
 
-### Week 5 Objectives:
+### Week 5 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Trace traffic through a VPC, subnets, and route tables.
+- Distinguish security groups from network ACLs and select connectivity by use case.
+- Explain the roles of Route 53, CloudFront, and Global Accelerator in global networking.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **VPC and network boundaries**<ul><li>Review connectivity needs for AWS resources, branch networks, and remote users. Analyze the scope of a VPC and the roles of an internet gateway and a virtual private gateway.</li><li>Draw the VPC as the application's network boundary and add paths to the internet, a branch network, and remote users. Explain which path uses an internet gateway and where a virtual private gateway fits in private connectivity.</li></ul> | Oct 12, 2026 | Oct 12, 2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Networking<br>02 — Organizing AWS Cloud Resources |
+| Tuesday | **Connectivity for users, networks, and services**<ul><li>Compare AWS Client VPN, AWS Site-to-Site VPN, AWS Direct Connect, and AWS PrivateLink by use case.</li><li>Use scenarios for remote staff, office connectivity, dedicated links, and private access to a service. Choose Client VPN, Site-to-Site VPN, Direct Connect, or PrivateLink for each and explain the connection scope.</li></ul> | Oct 13, 2026 | Oct 13, 2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — More Ways to Connect to the AWS Cloud |
+| Wednesday | **Subnets, routing, and traffic controls**<ul><li>Compare public and private subnets, stateful security groups, and stateless network ACLs. Review the VPC demo with public and private subnets across two AZs, an internet gateway, and a route table.</li><li>Trace a request to a server in a VPC with public and private subnets across two AZs. Read the route table, then check both filtering layers: security groups track connection state, while network ACLs require reviewing rules in both directions.</li></ul> | Oct 14, 2026 | Oct 14, 2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Subnets, Security Groups, and Network Access Control Lists<br>05 — Amazon VPC Demo |
+| Thursday | **DNS, content delivery, and traffic acceleration**<ul><li>Distinguish DNS through Route 53, content delivery through CloudFront, and traffic acceleration through Global Accelerator.</li><li>Use an application with a custom domain and static content to distinguish name resolution from content delivery. Annotate Route 53, CloudFront, and Global Accelerator at their respective points in the diagram.</li></ul> | Oct 15, 2026 | Oct 15, 2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Global Networking |
+| Friday | **Redundant connectivity and global delivery**<ul><li>Review example architectures for resilient Direct Connect connectivity and content delivery across Regions.</li><li>Review two cases: redundant Direct Connect connectivity and content delivery across Regions. Identify what needs redundancy in each case and sketch what happens when a connection or destination becomes unavailable.</li></ul> | Oct 16, 2026 | Oct 16, 2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>07 — Global Architectures |
 
-### Week 5 Achievements:
+### Week 5 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Client VPN connects remote users, Site-to-Site VPN connects networks, Direct Connect provides dedicated connectivity, and PrivateLink enables private access to services.
+- Route tables determine traffic paths in a VPC. For global users, Route 53 handles DNS, CloudFront delivers content, and Global Accelerator optimizes traffic paths.

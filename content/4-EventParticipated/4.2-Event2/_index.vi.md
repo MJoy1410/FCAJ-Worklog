@@ -1,125 +1,86 @@
 ---
 title: "Event 2"
-date: 2024-01-01
-weight: 1
+date: 2026-09-26
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Buildrathon Kickoff
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+- **Chủ đề** · Code the Future with CMC Global
+- **Ngày tổ chức** · Thứ Bảy, 26/09/2026
+- **Địa điểm** · Tầng 26, Bitexco Financial Tower, TP.HCM
+- **Đơn vị phối hợp** · AWS First Cloud AI Journey (FCAJ) và CMC Global
+- **Vai trò** · Người tham dự
 
-### Mục Đích Của Sự Kiện
+![Poster Buildrathon Kickoff với ba diễn giả Thien Lu, Truong Bui và Phong Pham](/images/4-EventParticipated/event-2/buildrathon-kickoff-poster.png)
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Mục đích của sự kiện
 
-### Danh Sách Diễn Giả
+FCAJ và CMC Global tổ chức buổi kickoff để giới thiệu thử thách Buildrathon, mục tiêu của chương trình và tiêu chí chấm. Chương trình kết hợp phần định hướng nghề nghiệp với một thử thách ngắn về AI agent. Phần mở đầu giới thiệu AWS Cloud, Generative AI và cách các dịch vụ AWS có thể hỗ trợ xây dựng agent. [Chương trình sự kiện](https://luma.com/8fe9vvps)
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Danh sách diễn giả
 
-### Nội Dung Nổi Bật
+| Diễn giả | Chức danh trên poster | Đơn vị |
+| --- | --- | --- |
+| Thien Lu | Program Manager | FCAJ |
+| Truong Bui | Tech Lead | CMC Global |
+| Phong Pham | Program Manager | FCAJ |
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+### Nội dung nổi bật
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+#### Lịch trình buổi sáng
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+| Thời gian (UTC+7) | Nội dung |
+| --- | --- |
+| 08:00–09:00 | Đón khách và check-in. |
+| 09:00–09:30 | Khai mạc, giới thiệu thử thách, mục tiêu và tiêu chí chấm. |
+| 09:30–09:45 | Làm quen và kết nối với những người tham dự. |
+| 09:45–10:30 | Talkshow về xây dựng sự nghiệp trong lĩnh vực Cloud và AI. |
+| 10:30–10:45 | Hỏi đáp về AWS, chứng chỉ, nghề nghiệp và thử thách Buildrathon. |
+| 10:45–11:15 | Thực hành với thử thách AI agent. |
+| 11:15–11:20 | Tổng kết, chia sẻ tài nguyên học tập và hoạt động cộng đồng sắp tới. |
+| 11:20–12:00 | Phỏng vấn thử theo [lịch sự kiện đăng lại](https://allai.events/event/buildrathon-kickoff-code-the-future-with-cmc-global). |
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+[Chương trình trên trang đăng ký](https://luma.com/8fe9vvps)
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Khai mạc và kết nối người tham dự
 
-#### Domain-Driven Design (DDD)
+Phần khai mạc giới thiệu bài toán Buildrathon và cách các đội sẽ được đánh giá. Sau đó là hoạt động làm quen, giúp người tham dự trao đổi về nền tảng, mối quan tâm với AWS và AI, cũng như chuẩn bị phối hợp trong thử thách. [Chương trình sự kiện](https://luma.com/8fe9vvps)
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Talkshow về nghề nghiệp Cloud và AI
 
-#### Event-Driven Architecture
+Talkshow đề cập xu hướng Cloud và AI, ví dụ dự án thực tế và hướng phát triển nghề nghiệp. Phần hỏi đáp tiếp nối với các chủ đề AWS, Generative AI, chứng chỉ và thử thách Buildrathon. [Chương trình sự kiện](https://luma.com/8fe9vvps)
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Thực hành AI Agent Challenge
 
-#### Compute Evolution
+Thử thách thực hành đặt ra bài toán xây dựng một giải pháp AI quy mô nhỏ trên AWS với sự hỗ trợ của mentor. Nội dung bao gồm cách viết prompt, sử dụng kho tri thức và truy xuất dữ liệu để bổ sung ngữ cảnh cho câu trả lời bằng RAG. AI agent là thành phần kết nối những bước đó trong bài toán thực hành. [Chương trình sự kiện](https://luma.com/8fe9vvps)
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Phỏng vấn thử
 
-#### Amazon Q Developer
+Lịch đăng lại có phần phỏng vấn thử cho các hướng Cloud Engineer, DevOps, Data Engineer và Solution Architect. Nội dung phản hồi tập trung vào kiến thức AWS, kỹ năng kỹ thuật và cách trình bày câu trả lời. [Lịch sự kiện đăng lại](https://allai.events/event/buildrathon-kickoff-code-the-future-with-cmc-global)
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+### Những gì học được
 
-### Những Gì Học Được
+- **Bắt đầu thử thách bằng bài toán và tiêu chí đánh giá.** Trước khi chọn dịch vụ, em cần diễn đạt được người dùng cần gì và giải pháp phải cho ra kết quả nào.
+- **Hiểu vai trò của nguồn dữ liệu trong ứng dụng AI.** Prompt xác định nhiệm vụ, còn kho tri thức cung cấp nội dung liên quan để hệ thống có cơ sở trả lời. Em có thể dùng một câu hỏi có sẵn đáp án để thử cách hệ thống truy xuất và sử dụng thông tin.
+- **Tập trình bày quyết định kỹ thuật.** Khi giới thiệu một dự án hoặc trả lời phỏng vấn, em có thể bắt đầu từ yêu cầu, giải thích phần mình thực hiện và đưa ra ví dụ về cách kiểm tra kết quả.
 
-#### Tư Duy Thiết Kế
+### Ứng dụng vào công việc
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+Từ phần thử thách AI agent, em có thể áp dụng cách xác định đầu vào, đầu ra và tiêu chí kiểm tra trước khi làm một tính năng AI. Chẳng hạn, với tính năng tạo bản nháp hồ sơ từ PDF trong [proposal Tindy](/vi/2-proposal/), em có thể chọn một tài liệu mẫu, xác định các trường cần trích xuất và kiểm tra trường hợp tài liệu thiếu thông tin. Đây là một cách chuyển nội dung thực hành của sự kiện thành đầu việc có kết quả để trình bày.
 
-#### Kiến Trúc Kỹ Thuật
+### Trải nghiệm tại sự kiện
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+Em tham dự trực tiếp buổi kickoff tại Bitexco Financial Tower. Phần em liên hệ rõ nhất với kỳ thực tập là thử thách AI agent và talkshow nghề nghiệp. Một phần đặt ra bài toán dùng AI để tạo đầu ra cụ thể, phần còn lại cho em cơ hội suy nghĩ về cách giải thích đầu ra đó khi giới thiệu dự án.
 
-#### Chiến Lược Hiện Đại Hóa
+#### Hình ảnh tại Buildrathon Kickoff
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+![Ảnh tập thể của người tham dự Buildrathon Kickoff tại hội trường](/images/4-EventParticipated/event-2/buildrathon-kickoff-audience.png)
 
-### Ứng Dụng Vào Công Việc
+*Ảnh tập thể tại hội trường Buildrathon Kickoff.*
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+![Ảnh nhóm chụp tại khu vực tổ chức Buildrathon Kickoff](/images/4-EventParticipated/event-2/buildrathon-kickoff-group.png)
 
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
-
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+*Ảnh lưu niệm tại địa điểm tổ chức.*

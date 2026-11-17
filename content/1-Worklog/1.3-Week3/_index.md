@@ -1,57 +1,30 @@
 ---
 title: "Week 3 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 3** — Serverless, containers, and compute services
 
-### Week 3 Objectives:
+### Week 3 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Compare operational responsibilities across EC2, managed services, and serverless.
+- Explain AWS Lambda event processing, including the trigger, handler, and execution permissions.
+- Choose container or specialized compute services based on deployment and workload needs.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Serverless and operational responsibilities**<ul><li>Compare EC2, managed services, and serverless by infrastructure control and operational effort.</li><li>Compare the operational work that remains when running an application on EC2, using a managed service, or adopting serverless. Build a short matrix for server management, capacity scaling, code deployment, and application permissions.</li></ul> | Sep 28, 2026 | Sep 28, 2026 | [AWS Skill Builder — Module 3](https://skillbuilder.aws/renderer/?module_id=D18S53TDBA%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Serverless Computing |
+| Tuesday | **Event processing with AWS Lambda**<ul><li>Review Lambda triggers, events, handlers, and execution permissions through an S3 upload example.</li><li>Trace an S3 upload. Identify the event source, the information passed to the function, the handler, and the permissions needed to read or write data. Note how execution duration affects the decision to use Lambda.</li></ul> | Sep 29, 2026 | Sep 29, 2026 | [AWS Skill Builder — Module 3](https://skillbuilder.aws/renderer/?module_id=D18S53TDBA%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — AWS Lambda |
+| Wednesday | **Containers and orchestration**<ul><li>Distinguish containers from virtual machines and review the roles of Amazon ECS, Amazon EKS, Amazon ECR, and AWS Fargate.</li><li>Compare packaging and environment consistency for the same application deployed as a VM and as a container. Diagram an image moving from ECR to an ECS or EKS workload, then annotate EC2 and Fargate as compute options.</li></ul> | Sep 30, 2026 | Sep 30, 2026 | [AWS Skill Builder — Module 3](https://skillbuilder.aws/renderer/?module_id=D18S53TDBA%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Containers and Orchestration on AWS |
+| Thursday | **Additional compute services**<ul><li>Compare AWS Elastic Beanstalk, AWS Batch, Amazon Lightsail, and AWS Outposts by use case.</li><li>List four needs: deploying a web app, running batch jobs, using a simple server, and operating AWS infrastructure on premises. Match each to a service from the lesson and identify what the application team still manages.</li></ul> | Oct 1, 2026 | Oct 1, 2026 | [AWS Skill Builder — Module 3](https://skillbuilder.aws/renderer/?module_id=D18S53TDBA%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Additional Compute Services |
+| Friday | **Scenario review for compute selection**<ul><li>Review Module 3 through three scenarios: processing file uploads, running a containerized app, and executing a batch job. Choose a service for each and explain why.</li><li>For each review scenario, record task duration, inputs, and required control over the environment. Choose a compute option, explain it, and name an assumption that could change the choice. Use the file-processing case to prepare for the Lambda lab.</li></ul> | Oct 2, 2026 | Oct 2, 2026 | [AWS Skill Builder — Module 3](https://skillbuilder.aws/renderer/?module_id=D18S53TDBA%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — AWS Lambda<br>03 — Containers and Orchestration on AWS<br>04 — Additional Compute Services |
 
-### Week 3 Achievements:
+### Week 3 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Lambda suits event-driven workloads. Task duration and execution permissions are two factors to check when choosing Lambda.
+- ECR stores container images, ECS and EKS orchestrate containers, and Fargate provides compute capacity to run them.

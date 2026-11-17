@@ -1,57 +1,31 @@
 ---
 title: "Week 9 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 9** — Security, data protection, and incident response
 
-### Week 9 Objectives:
+### Week 9 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Distinguish authentication, authorization, and AWS and customer responsibilities.
+- Choose safeguards at the network, application, and data layers.
+- Identify the role of each service in detection and investigation.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Identity and access control**<ul><li>Distinguish authentication from authorization using a Tindy user signing in and then requesting a resource. Review root account protection with MFA and appropriate identities for regular tasks.</li><li>Read IAM policies in terms of principals, actions, and resources. Use an ECS task role accessing S3 as a least-privilege scenario, then compare it with human access through IAM Identity Center.</li></ul> | Nov 9, 2026 | Nov 9, 2026 | [AWS Skill Builder — Module 9](https://skillbuilder.aws/renderer/?module_id=TNAPD78T9R%3A002.001.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Security on AWS<br>02 — Preventing Unauthorized Access |
+| Tuesday | **Network and application protection**<ul><li>Trace CloudFront, the ALB, and ECS to identify the traffic each security group needs to allow.</li><li>Compare AWS WAF filtering at the application layer with AWS Shield protection against DDoS. Identify which components belong to the course's defense-in-depth example when relating it to Tindy's architecture.</li></ul> | Nov 10, 2026 | Nov 10, 2026 | [AWS Skill Builder — Module 9](https://skillbuilder.aws/renderer/?module_id=TNAPD78T9R%3A002.001.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Protecting Networks and Applications |
+| Wednesday | **Encryption and data protection**<ul><li>Distinguish encryption at rest in S3 or EBS from encryption in transit through TLS. Use a document upload to identify the points the data passes through.</li><li>Compare AWS KMS key management with ACM certificate management. Identify the permissions to check for encrypted data access, including resource access and permission to use the key where applicable.</li></ul> | Nov 11, 2026 | Nov 11, 2026 | [AWS Skill Builder — Module 9](https://skillbuilder.aws/renderer/?module_id=TNAPD78T9R%3A002.001.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Protecting Data |
+| Thursday | **Detection and incident investigation**<ul><li>Map the roles of Inspector for vulnerability findings, GuardDuty for threat findings, Detective for investigation, and Security Hub for consolidated security visibility.</li><li>Use a sample finding to identify the resource, time, and evidence to check. Link finding triage to impact verification before choosing a response.</li></ul> | Nov 12, 2026 | Nov 12, 2026 | [AWS Skill Builder — Module 9](https://skillbuilder.aws/renderer/?module_id=TNAPD78T9R%3A002.001.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — Detecting and Responding to Security Incidents |
+| Friday | **Reviewing security resources**<ul><li>Identify when to use AWS documentation for configuration, Knowledge Center for troubleshooting, and the AWS Security Blog for implementation context.</li><li>Review a scenario for adopting a security solution from AWS Marketplace. Evaluate permissions, cost, operating responsibilities, and infrastructure fit before selecting it.</li></ul> | Nov 13, 2026 | Nov 13, 2026 | [AWS Skill Builder — Module 9](https://skillbuilder.aws/renderer/?module_id=TNAPD78T9R%3A002.001.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Additional Security Resources |
 
-### Week 9 Achievements:
+### Week 9 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- IAM and least privilege limit what each identity or workload can do.
+- Security groups, WAF, Shield, TLS, and encryption at rest serve different protection layers.
+- A security finding is an input to verifying the affected resource, timeline, and impact.

@@ -1,57 +1,30 @@
 ---
 title: "Week 4 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 4** — AWS Regions and infrastructure automation
 
-### Week 4 Objectives:
+### Week 4 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Distinguish the roles of Regions, Availability Zones, and edge locations in serving global users.
+- Evaluate Regions against user location, compliance, service availability, and cost.
+- Explain how AWS CloudFormation describes infrastructure, deploys it, and tracks changes.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Deploying for global users**<ul><li>Review the roles of Regions and edge locations in serving global users.</li><li>Distinguish where a backend runs from where content is delivered near users. Draw a request from the browser to edge content and then to the application in a Region, noting how each location affects latency.</li></ul> | Oct 5, 2026 | Oct 5, 2026 | [AWS Skill Builder — Module 4](https://skillbuilder.aws/renderer/?module_id=VEE8JSBK3Z%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Going Global |
+| Tuesday | **AWS Region selection criteria**<ul><li>Evaluate Region choices based on compliance, proximity to users, service availability, and cost.</li><li>Build a Region selection matrix for an application serving two user groups. Mark mandatory data residency and service availability requirements before comparing latency and cost among the remaining options.</li></ul> | Oct 6, 2026 | Oct 6, 2026 | [AWS Skill Builder — Module 4](https://skillbuilder.aws/renderer/?module_id=VEE8JSBK3Z%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — Choosing AWS Regions |
+| Wednesday | **Resource placement in AWS infrastructure**<ul><li>Review Regions, Availability Zones, and edge locations from an application deployment perspective.</li><li>Use an application spanning two AZs to distinguish choosing a Region from placing resources inside it. Explain when AZ redundancy is needed and when an application might need to serve users from multiple Regions.</li></ul> | Oct 7, 2026 | Oct 7, 2026 | [AWS Skill Builder — Module 4](https://skillbuilder.aws/renderer/?module_id=VEE8JSBK3Z%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Diving Deeper into AWS Global Infrastructure |
+| Thursday | **Templates, stacks, and change management**<ul><li>Review CloudFormation templates and stacks and the roles of change sets, drift detection, and StackSets.</li><li>Annotate a template's parameters, resources, and outputs. Map each task to the relevant feature: preview changes with a change set, identify differences with drift detection, and use StackSets to manage deployments across accounts or Regions.</li></ul> | Oct 8, 2026 | Oct 8, 2026 | [AWS Skill Builder — Module 4](https://skillbuilder.aws/renderer/?module_id=VEE8JSBK3Z%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Infrastructure and Automation |
+| Friday | **Region selection scenario and deployment settings**<ul><li>Choose a Region for a sample application, justify it using the selection criteria, and outline the parameters needed in a CloudFormation template.</li><li>Turn the Region decision into repeatable deployment settings. Distinguish fixed template values from parameters supplied at stack creation. Use the proposed parameters and outputs to prepare for the following week's lab.</li></ul> | Oct 9, 2026 | Oct 9, 2026 | [AWS Skill Builder — Module 4](https://skillbuilder.aws/renderer/?module_id=VEE8JSBK3Z%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — Choosing AWS Regions<br>04 — Infrastructure and Automation |
 
-### Week 4 Achievements:
+### Week 4 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Region selection balances latency with data residency requirements, service features, and cost.
+- CloudFormation templates describe infrastructure, and stacks manage the resources deployed from those templates.

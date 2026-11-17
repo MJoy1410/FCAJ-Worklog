@@ -1,57 +1,30 @@
 ---
 title: "Week 6 Worklog"
 date: 2024-01-01
-weight: 1
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 6** — AWS storage, EBS, and S3
 
-### Week 6 Objectives:
+### Week 6 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Choose block, object, or file storage based on how an application accesses data.
+- Distinguish EC2 instance store from Amazon EBS and explain snapshot and retention policies.
+- Explain Amazon S3 structure and choose suitable storage classes and transition or expiration rules.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Block, object, and file storage**<ul><li>Compare block, object, and file storage through examples with Amazon EBS, Amazon S3, and Amazon EFS.</li><li>Compare three access models: block devices, objects by key, and shared filesystem files. Use a database on EC2, user uploads, and a shared directory to choose among EBS, S3, and EFS.</li></ul> | Oct 19, 2026 | Oct 19, 2026 | [AWS Skill Builder — Module 6](https://skillbuilder.aws/renderer/?module_id=18SQAPSR8X%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Storage |
+| Tuesday | **EC2 instance store and Amazon EBS**<ul><li>Compare EC2 instance store and Amazon EBS by data persistence across instance state changes.</li><li>Build a reboot, stop, and terminate comparison for instance store and EBS. Identify when temporary files fit instance store, when a persistent volume is needed, and which setting affects EBS retention on termination.</li></ul> | Oct 20, 2026 | Oct 20, 2026 | [AWS Skill Builder — Module 6](https://skillbuilder.aws/renderer/?module_id=18SQAPSR8X%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — EC2 Instance Store and Amazon Elastic Block Store (Amazon EBS) |
+| Wednesday | **Snapshots and the EBS lifecycle**<ul><li>Review incremental snapshots, restoring volumes from snapshots, and backup automation with Amazon Data Lifecycle Manager.</li><li>Draw a snapshot timeline showing changed blocks across backups. Explain how to create a new volume from a recovery point and outline a DLM policy with snapshot timing and retention.</li></ul> | Oct 21, 2026 | Oct 21, 2026 | [AWS Skill Builder — Module 6](https://skillbuilder.aws/renderer/?module_id=18SQAPSR8X%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Amazon Elastic Block Store (Amazon EBS) Data Lifecycle |
+| Thursday | **Amazon S3 buckets, objects, and metadata**<ul><li>Review buckets, objects, keys, and metadata. Distinguish durability from availability.</li><li>Describe how a bucket contains objects, a key identifies an object, and metadata describes it. Use a profile file to distinguish permission to read it, availability at a given time, and long-term durability.</li></ul> | Oct 22, 2026 | Oct 22, 2026 | [AWS Skill Builder — Module 6](https://skillbuilder.aws/renderer/?module_id=18SQAPSR8X%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Amazon Simple Storage Service (Amazon S3) |
+| Friday | **Storage classes, S3 Lifecycle, and the S3 demo**<ul><li>Compare storage classes by access frequency, retrieval time, and cost. Review S3 Lifecycle transitions and object expiration. Review the demo for creating a bucket, uploading an object, inspecting metadata, and examining bucket policy and S3 Versioning.</li><li>Choose storage classes for frequently viewed images, infrequently accessed data, and long-term archives. Draft a Lifecycle example with transition and expiration dates. Cross-check the console demo for the bucket, object, and version information to inspect.</li></ul> | Oct 23, 2026 | Oct 23, 2026 | [AWS Skill Builder — Module 6](https://skillbuilder.aws/renderer/?module_id=18SQAPSR8X%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — Amazon S3 Storage Classes and S3 Lifecycle<br>06 — Amazon S3 Demonstration |
 
-### Week 6 Achievements:
+### Week 6 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Instance store suits temporary data, EBS persists data according to the volume lifecycle, and snapshots provide recovery points.
+- Choose storage classes based on data access requirements. S3 Lifecycle automates object transitions and expiration.

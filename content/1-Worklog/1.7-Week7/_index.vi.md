@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 7"
+title: "Nhật ký Công việc Tuần 7"
 date: 2024-01-01
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+**Module 7** — Cơ sở dữ liệu và bộ nhớ đệm trên AWS
 
-### Mục tiêu tuần 7:
+### Mục tiêu Tuần 7
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Chọn cơ sở dữ liệu quan hệ hoặc NoSQL dựa trên mô hình dữ liệu, giao dịch và mẫu truy cập.
+- Phân tích thao tác SQL và DynamoDB trong bài demo của khóa học.
+- Giải thích vai trò của cache, cơ sở dữ liệu chuyên dụng và sao lưu.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ trong tuần
 
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | **Chọn cơ sở dữ liệu theo bài toán**<ul><li>Dùng chương trình tích điểm của quán cà phê để xác định dữ liệu khách hàng, giao dịch và số điểm cần lưu.</li><li>Liệt kê các thao tác đọc và ghi thường gặp trước khi chọn dịch vụ. Liên hệ với Tindy qua các quan hệ giữa tài khoản, dự án và đơn ứng tuyển, rồi giải thích vì sao mẫu truy cập ảnh hưởng đến thiết kế dữ liệu.</li></ul> | 26/10/2026 | 26/10/2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Databases |
+| Thứ Ba | **SQL, Amazon RDS và Amazon Aurora**<ul><li>Ôn bảng, khóa chính, khóa ngoại và giao dịch SQL. Dùng thao tác cập nhật hồ sơ tuyển dụng để phân tích vì sao nhiều thay đổi liên quan cần nhất quán.</li><li>So sánh tự vận hành cơ sở dữ liệu trên EC2 với Amazon RDS và Aurora. Ghi rõ phần việc ứng dụng vẫn quản lý, gồm schema và quyền truy cập, rồi đọc cách bản sao lưu và khôi phục tại một thời điểm hỗ trợ vận hành.</li></ul> | 27/10/2026 | 27/10/2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>02 — Relational Database Services |
+| Thứ Tư | **Amazon DynamoDB và mẫu truy cập NoSQL**<ul><li>Phân biệt table, item và attribute. Xác định khóa phân vùng và trường hợp cần thêm khóa sắp xếp để lưu nhiều mục có cùng khóa phân vùng.</li><li>Phác thảo cách đọc danh sách đơn hàng theo khách hàng bằng khóa đã chọn. Đối chiếu trường hợp một Region với bài toán cần đọc và ghi tại nhiều Region để hiểu vai trò của DynamoDB Global Tables.</li></ul> | 28/10/2026 | 28/10/2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — NoSQL Database Services |
+| Thứ Năm | **Phân tích demo RDS và DynamoDB**<ul><li>Theo dõi demo tạo cơ sở dữ liệu MySQL trên RDS, thêm dữ liệu vào các bảng và dùng JOIN để đọc thông tin có quan hệ.</li><li>Đối chiếu với demo tạo bảng DynamoDB và thêm item qua SDK. So sánh Query theo khóa với Scan đọc qua bảng, nêu cách khác biệt đó ảnh hưởng đến lượng dữ liệu được đọc. Ghi lại các tài nguyên phải kiểm tra nếu thực hiện lại demo.</li></ul> | 29/10/2026 | 29/10/2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — AWS Databases Demonstration |
+| Thứ Sáu | **Cache và cơ sở dữ liệu chuyên dụng**<ul><li>Vẽ luồng cache hit và cache miss giữa API, ElastiCache và RDS. Cân nhắc thời hạn cache và nguy cơ trả dữ liệu cũ sau một lần cập nhật.</li><li>Ghép DocumentDB với dữ liệu dạng tài liệu, Neptune với quan hệ dạng đồ thị, DAX với tăng tốc đọc DynamoDB và Managed Blockchain với tình huống dùng sổ cái phân tán. Liên hệ AWS Backup với yêu cầu khôi phục dữ liệu từ điểm sao lưu.</li></ul> | 30/10/2026 | 30/10/2026 | [AWS Skill Builder — Module 7](https://skillbuilder.aws/renderer/?module_id=B1DGAV8S16%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — In-Memory Caching Services<br>06 — Additional Database Services |
 
-### Kết quả đạt được tuần 7:
+### Thành tựu Tuần 7
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Mẫu truy vấn, quan hệ giữa bản ghi và yêu cầu giao dịch là cơ sở chọn dịch vụ và khóa dữ liệu.
+- Có thể phân biệt các bước JOIN trong RDS với Query và Scan trong DynamoDB qua demo của khóa học.
+- Cache giảm lượt đọc trực tiếp vào cơ sở dữ liệu. Chính sách sao lưu và kiểm tra khôi phục giải quyết nhu cầu bảo toàn dữ liệu.

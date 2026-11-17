@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 1"
+title: "Nhật ký Công việc Tuần 1"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+**Module 1** — Nền tảng AWS Cloud và hạ tầng
 
-### Mục tiêu tuần 1:
+### Mục tiêu Tuần 1
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Giải thích mô hình client–server, cách cấp phát tài nguyên theo nhu cầu và cách trả phí theo mức sử dụng.
+- Phân biệt Region, Availability Zone và trung tâm dữ liệu để chọn vị trí triển khai phù hợp.
+- Áp dụng mô hình trách nhiệm chia sẻ với Amazon EC2, Amazon RDS và Amazon S3.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ trong tuần
 
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | **Điện toán đám mây và mô hình client–server**<ul><li>Tìm hiểu vai trò của client và server trong một yêu cầu, mô hình cấp phát theo nhu cầu và cách trả phí theo mức sử dụng.</li><li>Vẽ luồng từ trình duyệt gửi yêu cầu đến máy chủ rồi nhận phản hồi. Dùng ví dụ cửa hàng trực tuyến để xác định dữ liệu nào do client gửi và công việc nào do server xử lý. Ghi lại sự khác nhau giữa mua sẵn máy chủ và cấp phát tài nguyên theo nhu cầu.</li></ul> | 14/09/2026 | 14/09/2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01–02 — Welcome to AWS Cloud Practitioner Essentials<br>What is Cloud Computing |
+| Thứ Ba | **Sáu lợi ích của AWS Cloud**<ul><li>Hệ thống hóa sáu lợi ích của AWS Cloud qua ví dụ cửa hàng trực tuyến.</li><li>Lập bảng sáu lợi ích của AWS Cloud, mỗi lợi ích đi kèm một tình huống. Chẳng hạn, mô tả cách cửa hàng đáp ứng thêm lượt truy cập trong đợt khuyến mãi và giảm công suất khi nhu cầu trở lại bình thường.</li></ul> | 15/09/2026 | 15/09/2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Benefits of the AWS Cloud |
+| Thứ Tư | **Hạ tầng toàn cầu của AWS**<ul><li>So sánh Region, Availability Zone và data center. Ôn vai trò của Multi-AZ và Multi-Region.</li><li>Vẽ quan hệ giữa Region, Availability Zone và data center. Dùng tình huống mất một AZ để giải thích ảnh hưởng đến ứng dụng đặt trong một AZ và ứng dụng có tài nguyên ở nhiều AZ. Ghi thêm khi nào cần xem xét một Region thứ hai.</li></ul> | 16/09/2026 | 16/09/2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Introduction to AWS Global Infrastructure |
+| Thứ Năm | **Mô hình trách nhiệm chia sẻ**<ul><li>Phân tích trách nhiệm bảo mật khi dùng Amazon EC2, Amazon RDS và Amazon S3.</li><li>Chia trách nhiệm thành hai cột AWS và khách hàng, rồi điền ví dụ cho EC2, RDS và S3. Theo dõi riêng trách nhiệm quản lý hệ điều hành, cấu hình quyền truy cập và dữ liệu để thấy sự khác nhau giữa các loại dịch vụ.</li></ul> | 17/09/2026 | 17/09/2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — The AWS Shared Responsibility Model |
+| Thứ Sáu | **Tình huống thương mại điện tử**<ul><li>Liên hệ vị trí triển khai, độ trễ và tính sẵn sàng với ví dụ thương mại điện tử.</li><li>Phác thảo cách triển khai cửa hàng phục vụ người dùng ở hai khu vực. Giải thích lựa chọn Region dựa trên độ trễ, sau đó xác định phần nào của kiến trúc cần dự phòng qua nhiều AZ. Tóm tắt trách nhiệm bảo mật còn lại của đội ứng dụng.</li></ul> | 18/09/2026 | 18/09/2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Applying Cloud Concepts to Real Life Use Cases |
 
-### Kết quả đạt được tuần 1:
+### Thành tựu Tuần 1
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Trả phí theo mức sử dụng và điều chỉnh tài nguyên theo nhu cầu giúp giảm việc phải dự đoán công suất trước.
+- Multi-AZ giúp ứng dụng chịu được sự cố ở một AZ. Trách nhiệm bảo mật của khách hàng thay đổi theo dịch vụ sử dụng.

@@ -6,39 +6,42 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+### [Event 1 · AWS Cloud and AI Day Hanoi 2026](4.1-Event1/)
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+- **Date** · Tuesday, September 29, 2026. The main event program ran from 07:30 to 17:00 (UTC+7).
+- **Main venue** · JW Marriott Hotel Hanoi, Hanoi
+- **Role** · Attendee at the FCAJ HCMC Watch Party in Ho Chi Minh City, following the live stream from Hanoi
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+The program featured a keynote and sessions on agentic AI, data and analytics, application modernization, security, and operations on AWS. [Official agenda](https://aws.amazon.com/events/cloud-day-hanoi/agenda/)
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+### [Event 2 · Buildrathon Kickoff: Code the Future with CMC Global](4.2-Event2/)
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+- **Date** · Saturday, September 26, 2026. The report covers 08:00–12:00 (UTC+7). The poster lists 09:00 as the main program start.
+- **Venue** · 26th floor, Bitexco Financial Tower, Ho Chi Minh City
+- **Role** · In-person attendee
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+The FCAJ and CMC Global kickoff introduced the challenge and featured a cloud and AI career talk, a Q&A, and a hands-on AI agent exercise.
 
-&emsp;**Role:** Attendee  
+### [Event 3 · First Cloud AI Journey Meetup](4.3-Event3/)
 
----
+- **Date and time** · Saturday, October 24, 2026, 09:00–12:00 (UTC+7)
+- **Venue** · 26th floor, Bitexco Financial Tower, Ho Chi Minh City
+- **Role** · In-person attendee
 
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+Five sessions covered a Vietnamese voice AI contact center, AWS Resource Access Manager, AWS Continuum and Security Agent, Amazon Bedrock AgentCore, and Kiro Crew.
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+### [Event 4 · AWS for Software & Financial Services Companies Day](4.4-Event4/)
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+- **Date and time** · Thursday, October 8, 2026, 09:15–18:00 (UTC+7)
+- **Venue** · Sheraton Saigon Grand Opera Hotel, Ho Chi Minh City
+- **Role** · In-person attendee
 
-&emsp;**Role:** Attendee  
+The program covered production agentic AI, data products, modernization with AWS Transform, and parallel workshops on Kiro and Amazon Bedrock AgentCore. Kyanon Digital shared a case study on limiting the impact of changes in Kubernetes.
+
+### [Event 5 · FCAJ Community Day](4.5-Event5/)
+
+- **Date and time** · Saturday, October 31, 2026, 09:00–12:00 (UTC+7)
+- **Venue** · 26th floor, Bitexco Financial Tower, Ho Chi Minh City
+- **Role** · **Education session speaker, 09:30–09:55**
+
+I presented *New to AWS? Where Should You Start?*, introducing AWS Study Group, AWS Skill Builder, and AWS Builder Center. The program also covered software factories, Lambda Web Functions, Amazon SQS, internships, and open source.

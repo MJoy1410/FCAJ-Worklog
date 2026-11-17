@@ -5,21 +5,17 @@ weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Student Information
 
-### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Trần Minh Tuấn
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0963198339
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** kethaman1998@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** FPT University
 
 &emsp; **Major:** Information Technology
 
@@ -29,16 +25,16 @@ chapter: false
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** September 14, 2026 to December 14, 2026
 
-![Your profile picture](/images/avatar.png)
+![Student profile photo](/images/mjoy.jpg)
 
-### Report Content
+### Report Contents
 
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
-4.  [Events Participated](4-EventParticipated/)
+3.  [Published Blog Posts](3-BlogsPosted/)
+4.  [Events Attended](4-EventParticipated/)
 5.  [Workshop](5-Workshop/)
-6.  [Self-evaluation](6-Self-evaluation/)
-7.  [Sharing and Feedback](7-Feedback/)
+6.  [Self-Evaluation](6-Self-evaluation/)
+7.  [Reflections and Feedback](7-Feedback/)

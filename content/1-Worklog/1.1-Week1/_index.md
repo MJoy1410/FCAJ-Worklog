@@ -5,53 +5,26 @@ weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 1** — AWS Cloud and infrastructure fundamentals
 
-### Week 1 Objectives:
+### Week 1 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Explain the client–server model, on-demand provisioning, and pay-as-you-go pricing.
+- Distinguish Regions, Availability Zones, and data centers to inform deployment location choices.
+- Apply the shared responsibility model to Amazon EC2, Amazon RDS, and Amazon S3.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Cloud computing and the client–server model**<ul><li>Review the roles of clients and servers in a request, on-demand provisioning, and pay-as-you-go pricing.</li><li>Draw the flow from the browser's request to the server and back. Use an online store to identify what data the client sends and what processing the server handles. Record how buying servers in advance differs from provisioning capacity as needed.</li></ul> | Sep 14, 2026 | Sep 14, 2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01–02 — Welcome to AWS Cloud Practitioner Essentials<br>What is Cloud Computing |
+| Tuesday | **Six benefits of the AWS Cloud**<ul><li>Summarize the six benefits of the AWS Cloud through an online store example.</li><li>Build a table of the six AWS Cloud benefits with a scenario for each. For example, explain how a store can handle extra traffic during a promotion and reduce capacity when demand returns to normal.</li></ul> | Sep 15, 2026 | Sep 15, 2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Benefits of the AWS Cloud |
+| Wednesday | **AWS global infrastructure**<ul><li>Compare Regions, Availability Zones, and data centers. Review the roles of Multi-AZ and Multi-Region designs.</li><li>Diagram the relationship between a Region, an Availability Zone, and a data center. Use an AZ outage to explain the impact on single-AZ and multi-AZ applications. Note when a second Region might be needed.</li></ul> | Sep 16, 2026 | Sep 16, 2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Introduction to AWS Global Infrastructure |
+| Thursday | **Shared responsibility model**<ul><li>Analyze security responsibilities for Amazon EC2, Amazon RDS, and Amazon S3.</li><li>Build an AWS-versus-customer responsibility matrix for EC2, RDS, and S3. Track operating system management, access configuration, and application data separately to see how responsibilities vary by service.</li></ul> | Sep 17, 2026 | Sep 17, 2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — The AWS Shared Responsibility Model |
+| Friday | **E-commerce scenario**<ul><li>Relate deployment location, latency, and availability to an e-commerce example.</li><li>Sketch an online store serving users in two locations. Explain the Region choice based on latency and identify which components need redundancy across AZs. Summarize the security responsibilities that remain with the application team.</li></ul> | Sep 18, 2026 | Sep 18, 2026 | [AWS Skill Builder — Module 1](https://skillbuilder.aws/renderer/?module_id=ZWYR2AX7VG%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Applying Cloud Concepts to Real Life Use Cases |
 
-### Week 1 Achievements:
+### Week 1 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Usage-based pricing and adjustable capacity reduce the need to estimate demand in advance.
+- Multi-AZ designs help applications withstand an AZ failure. Customer security responsibilities vary by service.

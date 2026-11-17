@@ -1,57 +1,31 @@
 ---
 title: "Week 12 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 12** — AWS migration strategies and data transfer
 
-### Week 12 Objectives:
+### Week 12 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Describe the migration phases and how AWS CAF helps prepare an organization.
+- Choose a strategy from the 7 Rs and identify suitable application or database migration tools.
+- Compare online and offline data transfer based on volume, timing, and bandwidth.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Migration phases and AWS CAF**<ul><li>List the work in Assess, Mobilize, and Migrate and Modernize. Use a .NET backend to identify dependencies such as PostgreSQL, file storage, and authentication before moving.</li><li>Map preparation tasks to the six AWS CAF perspectives: Business, People, Governance, Platform, Security, and Operations. Identify who owns assessment, preparation, and ongoing operations.</li></ul> | Nov 30, 2026 | Nov 30, 2026 | [AWS Skill Builder — Module 12](https://skillbuilder.aws/renderer/?module_id=P6BSGWZVFE%3A001.000.003&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Migration<br>02 — AWS Cloud Adoption Framework |
+| Tuesday | **The seven migration strategies and tools**<ul><li>Compare rehost, relocate, replatform, refactor, repurchase, retain, and retire. Use a move from self-managed PostgreSQL to RDS to explain replatforming.</li><li>Review the roles of dependency discovery, cost modeling, server migration, and progress tracking. Compare AWS Application Migration Service with planning tools and place the services covered in the transcript in their lesson context.</li></ul> | Dec 1, 2026 | Dec 1, 2026 | [AWS Skill Builder — Module 12](https://skillbuilder.aws/renderer/?module_id=P6BSGWZVFE%3A001.000.003&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — Seven Migration Strategies<br>04 — Migration Services and Tools |
+| Wednesday | **Database migration with AWS DMS**<ul><li>Distinguish homogeneous from heterogeneous migrations. Identify when schema conversion is required and the roles of AWS DMS and schema conversion tooling.</li><li>Outline a PostgreSQL migration with an initial full load, change data capture where appropriate, record counts, and transaction checks before cutover. Define when to stop or return to the source if verification fails.</li></ul> | Dec 2, 2026 | Dec 2, 2026 | [AWS Skill Builder — Module 12](https://skillbuilder.aws/renderer/?module_id=P6BSGWZVFE%3A001.000.003&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — Database Migrations |
+| Thursday | **Online data transfer**<ul><li>Compare DataSync for moving datasets between storage systems, Transfer Family for receiving files over supported protocols, and Direct Connect for dedicated connectivity.</li><li>Estimate copy time for a media directory from volume and effective throughput. Distinguish a one-time file transfer from long-term connectivity and define checks for the files at the destination.</li></ul> | Dec 3, 2026 | Dec 3, 2026 | [AWS Skill Builder — Module 12](https://skillbuilder.aws/renderer/?module_id=P6BSGWZVFE%3A001.000.003&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Transferring Data Online |
+| Friday | **Offline data transfer and trade-offs**<ul><li>Review the Snowball Edge example in the notes to understand copying data to a device, shipping it, and importing it into AWS. Relate edge processing to environments with unreliable connectivity.</li><li>Compare copying, shipping, and import time with an online transfer. In the sample plan, note the need to verify service availability and choose how to validate data integrity after the move.</li></ul> | Dec 4, 2026 | Dec 4, 2026 | [AWS Skill Builder — Module 12](https://skillbuilder.aws/renderer/?module_id=P6BSGWZVFE%3A001.000.003&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>07 — Transferring Data Offline |
 
-### Week 12 Achievements:
+### Week 12 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Dependency inventory and the AWS CAF perspectives help define what needs to be ready before cutover.
+- The 7 Rs distinguish how much an application changes. Schema conversion, initial load, and change replication need separate planning.
+- Transfer estimates need to account for effective throughput, downtime, and post-migration reconciliation.

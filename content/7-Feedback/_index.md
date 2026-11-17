@@ -6,42 +6,39 @@ chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+### Overall evaluation
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+#### Working and learning environment
 
-### Overall Evaluation
+What I valued about FCAJ was the opportunity to learn in several ways. I could study AWS fundamentals by topic and hear engineering teams describe how they use those services at work. The Amazon SQS session at Community Day, for example, provided a practical example to connect with the queuing concepts in my worklog. Speaking at the event also gave me a reason to organize what I had learned for a beginner audience.
 
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
+#### Mentor and program coordinator support
 
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
+The most useful form of support for a project intern is feedback on a specific deliverable. A review of Tindy's architecture could focus on how a request flows through the system, where data is stored, and how the team can verify the flow. At the deployment milestone, a similar review could focus on a pull request, an integration issue, or a post-release check. Keeping support times and question channels in one place would help interns prepare material and use mentor time effectively.
 
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
+#### Relevance to my major
 
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
+Tindy gave me a way to connect my information technology coursework with a system that uses a frontend, API, PostgreSQL, and AWS components. Each implementation decision also raised questions about access, environment configuration, observability, and recovery. For example, the PDF scanning workflow needs to explain both how users see the document status and how the worker handles failed messages.
 
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
+#### Learning and skill development
 
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+The program gave me opportunities to practice technical research and communication. I selected articles on Kiro Workflows, AgentCore, and AWS Emulator and summarized them for the report. Preparing the Community Day Education session required me to explain a learning path at a level suited to beginners. Organizing AWS Study Group, AWS Skill Builder, and AWS Builder Center by purpose helped turn the resources I had explored into a guide people could follow.
 
----
+#### Knowledge sharing and teamwork
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+I valued hearing both practitioners and community members speak at FCAJ events. The format gives interns a place to bring their questions and share what they have learned. In project work, I want to keep updates short and concrete by reporting what is complete, what is blocked, and which changes affect others. That gives frontend, backend, and infrastructure contributors an early signal when they need to coordinate.
 
----
+#### Resources and hands-on access
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+Workshops, learning materials, and community events helped me plan what to study. For labs that require account access or provision resources, it would help to state which environment to use, what permissions are needed, what support or credit eligibility is available where applicable, and how to clean up. Interns would then be better prepared to start the lab and check its impact on their budget afterward.
+
+### What I appreciated most
+
+My highlight was presenting **New to AWS? Where Should You Start?** at FCAJ Community Day. I used resources I had explored to answer a question students often ask. I would recommend FCAJ to students who want a structured way to study AWS, practice through a project, and participate in a community. If I have the opportunity to stay involved, I would like to share a short lab or help new learners choose resources that match their goals.
+
+### Suggestions for future cohorts
+
+1. **Provide one place to start in the first week.** An onboarding page could bring together the weekly plan, learning links, deliverable expectations, question channels, and examples of evidence to capture. A new module could point to a short lab and a question students can use to check their understanding.
+2. **Hold a short technical review at the end of each sprint.** A team could bring an architecture diagram, pull request, or demo recording. The team and mentor could agree on one thing to verify before the next sprint. This would help surface access, data, or deployment issues sooner.
+3. **Include an operations exercise before the deployment milestone.** A short exercise could start with API 5xx errors and work through ALB target health, ECS events, and application logs. The output could record an observation, a hypothesis, and a verification step so interns have a model for documenting troubleshooting.
+4. **Keep short speaking opportunities open to interns.** A five- to ten-minute session in a small group could cover a lab, an architecture decision, or a problem someone investigated. This would give more interns a chance to practice before speaking at a larger event such as Community Day.

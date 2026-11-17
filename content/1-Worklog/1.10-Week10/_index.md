@@ -1,57 +1,31 @@
 ---
 title: "Week 10 Worklog"
 date: 2024-01-01
-weight: 2
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+**Module 10** — Monitoring, compliance, and governance on AWS
 
-### Week 10 Objectives:
+### Week 10 Objectives
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Distinguish operational metrics, application logs, and API activity history.
+- Identify AWS compliance evidence and evidence to gather from customer resources.
+- Explain multi-account governance and how to act on operational recommendations.
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks for the Week
 
+| Day | Task | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | **Monitoring applications with Amazon CloudWatch**<ul><li>Distinguish monitoring, auditing, compliance, and governance. Use a spike in Tindy API 5xx responses to choose metrics, a log group, and a time window.</li><li>Outline a dashboard for healthy targets, error rate, and ECS CPU usage. Explain how an alarm evaluates a threshold and sends an SNS notification when investigation is needed.</li></ul> | Nov 16, 2026 | Nov 16, 2026 | [AWS Skill Builder — Module 10](https://skillbuilder.aws/renderer/?module_id=HU3PMBK47Y%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Monitoring, Compliance, and Governance in the AWS Cloud<br>02 — Introduction to Monitoring<br>03 — Amazon CloudWatch |
+| Tuesday | **Auditing activity with AWS CloudTrail**<ul><li>Read a sample event to identify who acted, which API was called, when it occurred, and which resource was involved. Compare management and data events.</li><li>Use a security group change or an ECS update through CI/CD to distinguish Event history from a trail that retains audit records. Note how to compare the change timestamp with errors observed in CloudWatch.</li></ul> | Nov 17, 2026 | Nov 17, 2026 | [AWS Skill Builder — Module 10](https://skillbuilder.aws/renderer/?module_id=HU3PMBK47Y%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — AWS CloudTrail |
+| Wednesday | **Compliance evidence and resource configuration**<ul><li>Distinguish AWS reports and agreements in Artifact from the application's own checks for configuration, policy, and data location.</li><li>Explain how AWS Config records configuration and evaluates resources against rules. Review how the course uses Audit Manager frameworks, controls, assessments, and evidence to organize an audit.</li></ul> | Nov 18, 2026 | Nov 18, 2026 | [AWS Skill Builder — Module 10](https://skillbuilder.aws/renderer/?module_id=HU3PMBK47Y%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>05 — Compliance<br>06 — Auditing AWS Resources for Compliance |
+| Thursday | **Multi-account AWS governance**<ul><li>Diagram AWS Organizations with a management account, member accounts, and OUs. Distinguish consolidated billing from permission management.</li><li>Use a separation between dev and production to explain how SCPs limit which permissions can be granted. Relate AWS Control Tower to landing zones, Account Factory, and controls for multi-account governance.</li></ul> | Nov 19, 2026 | Nov 19, 2026 | [AWS Skill Builder — Module 10](https://skillbuilder.aws/renderer/?module_id=HU3PMBK47Y%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>07 — AWS Organizations<br>08 — Governance |
+| Friday | **AWS Health and AWS Trusted Advisor**<ul><li>Use a Fargate maintenance notification to identify affected resources, timing, and suggested actions in AWS Health.</li><li>Compare an AWS Health event with a Trusted Advisor recommendation. Choose a cost or service-limit check, verify the affected resource, and record who owns the follow-up.</li></ul> | Nov 20, 2026 | Nov 20, 2026 | [AWS Skill Builder — Module 10](https://skillbuilder.aws/renderer/?module_id=HU3PMBK47Y%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>09 — AWS Health<br>10 — AWS Trusted Advisor |
 
-### Week 10 Achievements:
+### Week 10 Learning Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- CloudWatch shows operational health, while CloudTrail traces API activity.
+- AWS Artifact provides AWS compliance documentation. AWS Config records and evaluates resource configuration against selected rules.
+- AWS Organizations and Control Tower support common controls across accounts. AWS Health and Trusted Advisor provide inputs for operational follow-up.

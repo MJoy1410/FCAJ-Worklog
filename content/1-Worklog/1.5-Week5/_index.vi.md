@@ -1,59 +1,30 @@
 ---
-title: "Worklog Tuần 5"
+title: "Nhật ký Công việc Tuần 5"
 date: 2024-01-01
-weight: 1
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+**Module 5** — Amazon VPC, bảo mật và mạng toàn cầu
 
-### Mục tiêu tuần 5:
+### Mục tiêu Tuần 5
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Lần theo đường đi của lưu lượng qua VPC, subnet và route table.
+- Phân biệt security group với network ACL và chọn phương án kết nối theo từng tình huống.
+- Giải thích vai trò của Route 53, CloudFront và Global Accelerator trong kiến trúc mạng toàn cầu.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các nhiệm vụ trong tuần
 
+| Ngày | Nhiệm vụ | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | **VPC và ranh giới mạng**<ul><li>Tìm hiểu nhu cầu kết nối tài nguyên AWS, mạng chi nhánh và người dùng từ xa. Phân tích phạm vi của VPC và vai trò của Internet Gateway và Virtual Private Gateway.</li><li>Vẽ VPC như ranh giới mạng của ứng dụng, sau đó thêm đường kết nối internet, mạng chi nhánh và người dùng làm việc từ xa. Giải thích trường hợp nào đi qua internet gateway và trường hợp nào cần xem xét virtual private gateway cho kết nối riêng.</li></ul> | 12/10/2026 | 12/10/2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>01 — Introduction to Networking<br>02 — Organizing AWS Cloud Resources |
+| Thứ Ba | **Kết nối người dùng, mạng và dịch vụ**<ul><li>Đối chiếu AWS Client VPN, AWS Site-to-Site VPN, AWS Direct Connect và AWS PrivateLink theo tình huống sử dụng.</li><li>Dùng các kịch bản nhân viên làm việc từ xa, kết nối văn phòng, nhu cầu đường truyền chuyên dụng và truy cập riêng một dịch vụ. Với mỗi kịch bản, chọn Client VPN, Site-to-Site VPN, Direct Connect hoặc PrivateLink và giải thích phạm vi kết nối cần thiết.</li></ul> | 13/10/2026 | 13/10/2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>03 — More Ways to Connect to the AWS Cloud |
+| Thứ Tư | **Subnet, định tuyến và kiểm soát lưu lượng**<ul><li>So sánh public/private subnet, Security Group có trạng thái và Network ACL phi trạng thái. Phân tích demo VPC với public/private subnets trên hai AZ, Internet Gateway và route table.</li><li>Lần theo yêu cầu đến máy chủ trong sơ đồ VPC có subnet public và private trải trên hai AZ. Đọc tuyến đường trong route table rồi kiểm tra hai lớp lọc: security group theo dõi trạng thái kết nối, còn network ACL cần xét quy tắc ở cả chiều đi và chiều về.</li></ul> | 14/10/2026 | 14/10/2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>04 — Subnets, Security Groups, and Network Access Control Lists<br>05 — Amazon VPC Demo |
+| Thứ Năm | **DNS, phân phối nội dung và tăng tốc mạng**<ul><li>Phân biệt DNS trong Route 53, phân phối nội dung qua CloudFront và tăng tốc lưu lượng qua Global Accelerator.</li><li>Dùng ví dụ ứng dụng có tên miền riêng và nội dung tĩnh để phân biệt điểm giải quyết tên miền với điểm phục vụ nội dung. Chú thích vai trò của Route 53, CloudFront và Global Accelerator trên sơ đồ thay vì gộp cả ba vào một lớp xử lý.</li></ul> | 15/10/2026 | 15/10/2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>06 — Global Networking |
+| Thứ Sáu | **Kiến trúc dự phòng và phân phối toàn cầu**<ul><li>Đọc ví dụ kiến trúc dự phòng kết nối Direct Connect và phân phối nội dung cho người dùng ở nhiều Region.</li><li>Đọc hai tình huống, một về dự phòng đường kết nối Direct Connect và một về phân phối nội dung ở nhiều Region. So sánh thành phần cần dự phòng ở mỗi tình huống và viết một sơ đồ ngắn cho biết điều gì xảy ra khi một đường kết nối hoặc một đích không khả dụng.</li></ul> | 16/10/2026 | 16/10/2026 | [AWS Skill Builder — Module 5](https://skillbuilder.aws/renderer/?module_id=K457BUCF7F%3A002.000.000&product_id=8D79F3AVR7%3A003.002.003&registration_id=a5d67877-3d77-5f7a-9e56-2ddce1349824&referrer=https%3A%2F%2Fskillbuilder.aws%2Flearn%2F94T2BEN85A%2Faws-cloud-practitioner-essentials%2F8D79F3AVR7&navigation=digital)<br>07 — Global Architectures |
 
-### Kết quả đạt được tuần 5:
+### Thành tựu Tuần 5
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Client VPN phục vụ người dùng từ xa, Site-to-Site VPN kết nối các mạng, Direct Connect cung cấp kết nối chuyên dụng và PrivateLink hỗ trợ truy cập riêng tới dịch vụ.
+- Route table quyết định đường đi của lưu lượng trong VPC. Ở lớp phục vụ người dùng toàn cầu, Route 53 xử lý DNS, CloudFront phân phối nội dung và Global Accelerator tối ưu đường đi của lưu lượng.

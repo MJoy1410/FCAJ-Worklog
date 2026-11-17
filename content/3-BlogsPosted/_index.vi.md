@@ -6,17 +6,16 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Phần này giới thiệu các bài kỹ thuật được chọn từ **AWS Builder Center** và các trang xuất bản gốc cho báo cáo thực tập.
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+### [Blog 1 – Kiro Workflows và quy trình đưa thay đổi lên staging](3.1-Blog1/)
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Bài viết của Poobalan P minh họa cách chuyển một GitHub issue thành pull request nháp đã qua kiểm tra, rồi xác minh thay đổi trên staging.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+### [Blog 2 – Điều phối đa agent và RAG đa tenant với Amazon Bedrock AgentCore](3.2-Blog2/)
 
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+Bài viết trình bày cách orchestrator phân công tác vụ, Cedar kiểm soát quyền gọi công cụ và bộ lọc metadata giới hạn tài liệu theo tenant trước khi ngữ cảnh đến các agent.
+
+### [Blog 3 – Trải nghiệm AWS Emulator trên một ứng dụng serverless thực tế](3.3-Blog3/)
+
+Ran Isenberg chuyển integration test của AWS Lambda Handler Cookbook sang AWS Emulator, giữ end-to-end test trên AWS và phân tích cách đánh giá độ tương thích của từng API.
