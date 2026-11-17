@@ -9,10 +9,9 @@ pre: " <b> 3.1. </b> "
 # Kiro Workflows — Từ GitHub issue đến pull request đã review trên staging
 
 - **Tác giả bài gốc** [Poobalan P](https://builder.aws.com/community/@poobalan1210)
-- **Nguồn** AWS Builder Center
+- **Nguồn** [AWS Builder Center](https://builder.aws.com/content/3MCoEpdAZs9KpBvcPp4ohQn6ZOE/kiro-workflows-hand-off-an-issue-get-back-a-reviewed-pr-on-staging)
 - **Ngày đăng** 17/11/2026
-
-[Đọc bài gốc trên AWS Builder Center](https://builder.aws.com/content/3MCoEpdAZs9KpBvcPp4ohQn6ZOE/kiro-workflows-hand-off-an-issue-get-back-a-reviewed-pr-on-staging)
+- **Cập nhật lần cuối** 17/11/2026
 
 ![Ảnh bìa bài viết Kiro Workflows về quy trình từ issue đến staging](/images/3-BlogsPosted/3.1-Blog1/kiro-workflows-cover.png)
 
