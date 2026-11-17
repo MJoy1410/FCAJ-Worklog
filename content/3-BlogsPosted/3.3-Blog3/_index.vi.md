@@ -8,11 +8,10 @@ pre: " <b> 3.3. </b> "
 
 # Trải nghiệm AWS Emulator trên một ứng dụng serverless thực tế
 
-- **Tác giả bài gốc** Ran Isenberg
-- **Đăng lần đầu** 12/11/2026
-- **Cập nhật** 13/11/2026
-
-[Đọc bài gốc trên Ran The Builder](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/)
+- **Tác giả bài gốc** [Ran Isenberg](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/#author-bio)
+- **Nguồn** [Ran The Builder](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/)
+- **Ngày đăng** 12/11/2026
+- **Cập nhật lần cuối** 13/11/2026
 
 ![Ảnh bìa bài viết đánh giá AWS Emulator qua ứng dụng serverless](/images/3-BlogsPosted/3.3-Blog3/aws-emulator-cover.png)
 

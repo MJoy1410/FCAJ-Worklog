@@ -8,11 +8,10 @@ pre: " <b> 3.3. </b> "
 
 # AWS Emulator: First Impressions From a Real Serverless App
 
-- **Original author** Ran Isenberg
-- **Published** November 12, 2026
-- **Updated** November 13, 2026
-
-[Read the original article on Ran The Builder](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/)
+- **Original author** [Ran Isenberg](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/#author-bio)
+- **Source** [Ran The Builder](https://ranthebuilder.cloud/blog/aws-emulator-first-impressions-from-a-real-serverless-app/)
+- **Published** Nov 12, 2026
+- **Last modified** Nov 13, 2026
 
 ![Cover illustration for the author's first impressions of AWS Emulator](/images/3-BlogsPosted/3.3-Blog3/aws-emulator-cover.png)
 

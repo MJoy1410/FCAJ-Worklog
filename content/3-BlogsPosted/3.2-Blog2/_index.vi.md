@@ -1,5 +1,6 @@
 ---
 title: "Blog 2"
+date: 2026-11-17
 weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
@@ -9,6 +10,8 @@ pre: " <b> 3.2. </b> "
 
 - **Tác giả bài gốc** [Leonid Gimelshtein](https://builder.aws.com/community/@cloudguru)
 - **Nguồn** [AWS Builder Center](https://builder.aws.com/content/3MCquj2lkgYhYNS1cpDrvT0P89Y/multi-agent-orchestration-and-multi-tenant-rag-with-amazon-bedrock-agentcore)
+- **Ngày đăng** 17/11/2026
+- **Cập nhật lần cuối** 17/11/2026
 
 Kiến trúc này kết hợp một orchestrator, các agent chuyên trách và Code Interpreter với công cụ truy xuất tài liệu đi qua AgentCore Gateway. Cedar quyết định ai được gọi công cụ. Bộ lọc metadata giới hạn tài liệu có thể được trả về theo tenant và quyền của người dùng.
 
