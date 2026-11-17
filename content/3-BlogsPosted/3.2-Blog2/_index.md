@@ -7,6 +7,9 @@ pre: " <b> 3.2. </b> "
 
 # Multi-Agent Orchestration and Multi-Tenant RAG with Amazon Bedrock AgentCore
 
+- **Original author** [Leonid Gimelshtein](https://builder.aws.com/community/@cloudguru)
+- **Source** [AWS Builder Center](https://builder.aws.com/content/3MCquj2lkgYhYNS1cpDrvT0P89Y/multi-agent-orchestration-and-multi-tenant-rag-with-amazon-bedrock-agentcore)
+
 This architecture connects an orchestrator, specialist agents, and Code Interpreter to a retrieval tool behind AgentCore Gateway. Cedar evaluates who can invoke the tool. Metadata filters limit the documents that can be returned to the tenant and permissions of the user who initiated the request.
 
 ![Cover illustration for the multi-agent architecture with multi-tenant RAG, AgentCore, and Cedar](/images/3-BlogsPosted/3.2-Blog2/multi-agent-rag-cover.png)

@@ -7,6 +7,9 @@ pre: " <b> 3.2. </b> "
 
 # Điều phối đa agent và RAG đa tenant với Amazon Bedrock AgentCore
 
+- **Tác giả bài gốc** [Leonid Gimelshtein](https://builder.aws.com/community/@cloudguru)
+- **Nguồn** [AWS Builder Center](https://builder.aws.com/content/3MCquj2lkgYhYNS1cpDrvT0P89Y/multi-agent-orchestration-and-multi-tenant-rag-with-amazon-bedrock-agentcore)
+
 Kiến trúc này kết hợp một orchestrator, các agent chuyên trách và Code Interpreter với công cụ truy xuất tài liệu đi qua AgentCore Gateway. Cedar quyết định ai được gọi công cụ. Bộ lọc metadata giới hạn tài liệu có thể được trả về theo tenant và quyền của người dùng.
 
 ![Ảnh bìa kiến trúc Multi-Agent, Multi-Tenant RAG, AgentCore và Cedar](/images/3-BlogsPosted/3.2-Blog2/multi-agent-rag-cover.png)

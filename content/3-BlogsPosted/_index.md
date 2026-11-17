@@ -14,7 +14,7 @@ Poobalan P demonstrates how a workflow takes a GitHub issue through implementati
 
 ### [Blog 2 – Multi-Agent Orchestration and Multi-Tenant RAG with Amazon Bedrock AgentCore](3.2-Blog2/)
 
-The article shows how an orchestrator delegates tasks, how Cedar controls tool invocation, and how tenant-scoped metadata filters limit document context before it reaches agents.
+[Leonid Gimelshtein](https://builder.aws.com/community/@cloudguru) shows how an orchestrator delegates tasks, how Cedar controls tool invocation, and how tenant-scoped metadata filters limit document context before it reaches agents. [AWS Builder Center](https://builder.aws.com/content/3MCquj2lkgYhYNS1cpDrvT0P89Y/multi-agent-orchestration-and-multi-tenant-rag-with-amazon-bedrock-agentcore)
 
 ### [Blog 3 – AWS Emulator: First Impressions From a Real Serverless App](3.3-Blog3/)
 
