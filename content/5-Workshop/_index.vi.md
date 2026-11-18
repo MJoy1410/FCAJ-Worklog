@@ -1,33 +1,29 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-11-18
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+Triển khai lại hạ tầng **Tindy trên AWS bằng CloudFormation**, tạo database PostgreSQL mới, chạy migration và seed dữ liệu demo, sau đó kiểm tra và quay video sử dụng ứng dụng qua CloudFront.
 
+Workshop dùng sáu template `foundation.yaml`, `network.yaml`, `database.yaml`, `integrations.yaml`, `runtime.yaml` và `edge.yaml`. Mỗi phần giải thích tài nguyên, tham số đầu vào, Outputs dùng cho stack tiếp theo và kết quả cần kiểm tra. Ảnh được chụp ngay tại các mốc thực hành.
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+## Cấu trúc đã chốt
 
-#### Tổng quan
+| Mục | Nội dung |
+| --- | --- |
+| [5.1 Tổng quan kiến trúc](5.1-Overview/) | Kiến trúc Tindy, sáu template và mục tiêu. |
+| [5.2 Chuẩn bị triển khai](5.2-Prerequisites/) | AWS, CLI, source, image và mapping. |
+| [5.3 Foundation và Network](5.3-Foundation-Network/) | Import Foundation và triển khai mạng. |
+| [5.4 Database và Integrations](5.4-Database-Integrations/) | Database Fresh và tích hợp quét PDF. |
+| [5.5 Runtime, seed và Edge](5.5-Runtime-Edge/) | Edge maintenance, Runtime, bootstrap, migration, seed và mở traffic. |
+| 5.6 | Kiểm tra và demo sử dụng Tindy. |
+| [5.7 Dọn dẹp tài nguyên](5.7-Cleanup/) | Cleanup môi trường hiện tại cùng ảnh và trạng thái đã xác minh. |
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+## Lượt thực hành hiện tại
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Hệ thống đã tồn tại nên thực hành mở đầu bằng cleanup, được ghi ở mục 5.7 theo cấu trúc bài viết. Sau đó dựng lại sáu stack trong cùng môi trường, chọn database Fresh, seed dữ liệu demo và dùng hostname CloudFront mới.
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
-
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+Đã xác minh maintenance trước cleanup và xóa thành công cả sáu stack Runtime, Database, Integrations, Edge, Network và Foundation với trạng thái DELETE_COMPLETE. Hướng dẫn chi tiết và ảnh nằm ở mục 5.7.

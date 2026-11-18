@@ -1,31 +1,29 @@
 ---
 title: "Workshop"
-date: 2024-01-01
+date: 2026-11-18
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+Redeploy **Tindy on AWS using CloudFormation**, create a Fresh PostgreSQL database, run migrations and demo seeding, and verify the application through CloudFront before recording a web demonstration.
 
-#### Overview
+The workshop uses six templates, `foundation.yaml`, `network.yaml`, `database.yaml`, `integrations.yaml`, `runtime.yaml` and `edge.yaml`. Each deployment section explains resources, parameters, outputs required by subsequent stacks and verification results, with screenshots captured during execution.
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
+## Agreed structure
 
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
+| Section | Content |
+| --- | --- |
+| [5.1 Architecture overview](5.1-Overview/) | Tindy architecture, six templates and objectives. |
+| [5.2 Deployment prerequisites](5.2-Prerequisites/) | AWS, CLI, source, image and mappings. |
+| [5.3 Foundation and Network](5.3-Foundation-Network/) | Import Foundation and deploy networking. |
+| [5.4 Database and Integrations](5.4-Database-Integrations/) | Fresh Database and PDF scanning integration. |
+| [5.5 Runtime, seeding and Edge](5.5-Runtime-Edge/) | Edge maintenance, Runtime, bootstrap, migrations, seeding and live traffic. |
+| 5.6 | Application verification and web demonstration. |
+| [5.7 Clean up resources](5.7-Cleanup/) | Recorded cleanup with verified progress and screenshots. |
 
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+## Current practical session
 
-#### Content
+Tindy already exists, so this session starts with cleanup, documented in section 5.7. Redeployment recreates six stacks in the same environment, selects a Fresh database, seeds demo data and uses a new CloudFront hostname.
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+Recorded evidence covers maintenance and successful all six stacks, Runtime, Database, Integrations, Edge, Network and Foundation, all verified as DELETE_COMPLETE. Section 5.7 contains the detailed procedure and screenshots.

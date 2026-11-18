@@ -140,17 +140,21 @@ Mốc hoàn thành dự án nằm ở **Tuần 10**. Từ Tuần 11 đến buổ
 
 ## 6. Ước tính ngân sách
 
-Kịch bản tham chiếu chạy liên tục **730 giờ/tháng** tại `us-east-1`, gồm một task Linux/x86 với **0,5 vCPU và 2 GiB RAM**, một ALB nội bộ và một public IPv4 cho task. Số liệu sau là ước tính theo giá công bố, trước thuế, tín dụng và mức sử dụng thực tế.
+Kịch bản chạy liên tục dùng mốc **730 giờ/tháng** tại `us-east-1`. Số liệu lấy từ dự toán `Tindy-Always-on` xuất từ AWS Pricing Calculator ngày **18/11/2026**, theo đơn giá trước chiết khấu, chưa tính thuế và tín dụng.
 
 | Khoản mục | Cơ sở tính | Chi phí tham chiếu |
 | --- | --- | ---: |
-| AWS Fargate | 730 giờ × cấu hình 0,5 vCPU và 2 GiB RAM. [Giá Fargate](https://aws.amazon.com/fargate/pricing/) | 21,27 USD/tháng |
-| Application Load Balancer | 730 giờ × 0,0225 USD/giờ, chưa cộng LCU. [Giá Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/pricing/) | 16,43 USD/tháng |
-| Public IPv4 | 730 giờ × 0,005 USD/giờ. [Giá Amazon VPC](https://aws.amazon.com/vpc/pricing/) | 3,65 USD/tháng |
-| RDS PostgreSQL | Một `db.t4g.micro` Single-AZ, 20 GiB gp3 khi tạo mới. Tính theo giờ, dung lượng, CPU credit và snapshot nếu phát sinh. [Giá RDS PostgreSQL](https://aws.amazon.com/rds/postgresql/pricing/) | Cần nhập cấu hình vào dự toán |
+| AWS Fargate | Một task Linux/x86 với 0,5 vCPU và 2 GiB RAM. Dự toán tính 365 vCPU-giờ và 1.460 GB-giờ RAM. | 21,26 USD/tháng |
+| Application Load Balancer | Một ALB nội bộ trong 730 giờ. | 16,43 USD/tháng |
+| Public IPv4 | Một địa chỉ public IPv4 cho task trong 730 giờ. | 3,65 USD/tháng |
+| RDS PostgreSQL | Một `db.t4g.micro` Single-AZ chạy 730 giờ (11,68 USD) và 20 GiB gp3 (2,30 USD). | 13,98 USD/tháng |
 | Edge, media, bảo mật và AI | CloudFront, S3, ECR, Secrets Manager, GuardDuty, EventBridge, SQS, CloudWatch và Bedrock. Chi phí phụ thuộc lượng lưu trữ, request, log, tệp quét và token. | Theo mức sử dụng |
 
-**Tạm tính ba khoản đã định lượng khoảng 41,3 USD/tháng.** Dự toán đầy đủ cần cộng RDS, LCU và các khoản theo mức sử dụng. Với môi trường chỉ dùng để demo, có thể so sánh kịch bản chạy liên tục với kịch bản chạy theo lịch rồi sao lưu và teardown có kiểm soát. Snapshot và các tài nguyên giữ lại vẫn cần đưa vào dự toán. [AWS Pricing Calculator](https://calculator.aws/)
+**Chi phí cơ sở khi chạy liên tục là 55,32 USD/tháng.** Số này chưa gồm LCU của ALB, phí CPU credit của RDS và dung lượng backup hoặc snapshot bổ sung nếu phát sinh, cùng các dịch vụ tính theo mức sử dụng ở trên. Khi tính kịch bản chạy theo lịch demo, cần cộng snapshot và các tài nguyên còn giữ giữa các buổi. [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=75ccee07f5778dcee28c50a2bdf393694e87a6de)
+
+Bản công khai hiển thị **55,34 USD/tháng**. So với số xuất từ AWS Console, chi phí hiển thị của Fargate và ALB mỗi mục cao hơn 0,01 USD. Phần tính ALB công khai dùng giả định lưu lượng 0,001 GB/giờ vì biểu mẫu yêu cầu một giá trị LCU dương.
+
+**Với mức tải thử nghiệm, dự trù khoảng 58 USD/tháng** cho hạ tầng chạy liên tục và các dịch vụ hỗ trợ đã tính. Báo cáo Cost Explorer kỳ 01–17/11/2026 cho thấy hạ tầng chính hoạt động chủ yếu từ 11 đến 17/11. Dự toán giả định tuần đó đại diện cho tháng 30 ngày, cộng 1,60 USD để lưu bốn secret và quy đổi các khoản sử dụng còn lại đã tính trong AWS Pricing Calculator (0,1804 USD × 30/7, gồm cả phí gọi API của Secrets Manager). Số này chưa gồm LCU của ALB, các khoản EventBridge chưa xác minh, CPU credit của RDS, dung lượng backup hoặc snapshot bổ sung và thuế.
 
 ### Hai kịch bản để đối chiếu
 

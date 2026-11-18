@@ -140,17 +140,21 @@ The project completion milestone is in **Week 10**. From Week 11 through the **D
 
 ## 6. Budget Estimate
 
-The reference scenario runs for **730 hours per month** in `us-east-1`, with one Linux/x86 task sized at **0.5 vCPU and 2 GiB RAM**, one internal ALB, and one public IPv4 address for the task. The figures use published rates before taxes, credits, and usage adjustments.
+The always-on scenario runs for **730 hours per month** in `us-east-1`. The figures come from the `Tindy-Always-on` workload estimate exported from AWS Pricing Calculator on **November 18, 2026**, using rates before discounts and excluding taxes and credits.
 
 | Cost item | Basis | Reference cost |
 | --- | --- | ---: |
-| AWS Fargate | 730 hours at 0.5 vCPU and 2 GiB RAM. [Fargate pricing](https://aws.amazon.com/fargate/pricing/) | USD 21.27/month |
-| Application Load Balancer | 730 hours at USD 0.0225/hour before LCU charges. [Elastic Load Balancing pricing](https://aws.amazon.com/elasticloadbalancing/pricing/) | USD 16.43/month |
-| Public IPv4 | 730 hours at USD 0.005/hour. [Amazon VPC pricing](https://aws.amazon.com/vpc/pricing/) | USD 3.65/month |
-| RDS for PostgreSQL | One Single-AZ `db.t4g.micro` with 20 GiB gp3 on fresh creation. Model instance hours, storage, and any CPU credit or snapshot charges. [RDS for PostgreSQL pricing](https://aws.amazon.com/rds/postgresql/pricing/) | To be estimated from configuration |
+| AWS Fargate | One Linux/x86 task with 0.5 vCPU and 2 GiB RAM. The estimate includes 365 vCPU-hours and 1,460 GB-hours of memory. | USD 21.26/month |
+| Application Load Balancer | One internal ALB for 730 hours. | USD 16.43/month |
+| Public IPv4 | One in-use public IPv4 address for the task for 730 hours. | USD 3.65/month |
+| RDS for PostgreSQL | One Single-AZ `db.t4g.micro` for 730 hours (USD 11.68) and 20 GiB gp3 (USD 2.30). | USD 13.98/month |
 | Edge, media, security, and AI | CloudFront, S3, ECR, Secrets Manager, GuardDuty, EventBridge, SQS, CloudWatch, and Bedrock. Charges vary with storage, requests, logs, scans, and tokens. | Usage-based |
 
-**The three quantified items subtotal approximately USD 41.3 per month.** A complete estimate adds RDS, LCUs, and usage-based items. For a demo environment, compare always-on operation with a scheduled deployment followed by a controlled backup and teardown. Include retained snapshots and resources in both estimates. [AWS Pricing Calculator](https://calculator.aws/)
+**The always-on baseline is USD 55.32 per month.** The baseline excludes ALB LCUs, any RDS CPU credit charges and additional backup or snapshot storage, and the usage-based services listed above. Include retained snapshots and other retained resources when estimating the scheduled demo scenario. [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=75ccee07f5778dcee28c50a2bdf393694e87a6de)
+
+The public estimate displays **USD 55.34 per month**. Compared with the AWS Console export, the displayed Fargate and ALB costs are each USD 0.01 higher. The public ALB calculation uses 0.001 GB/hour of assumed traffic because the form requires a positive LCU input.
+
+**At pilot traffic, budget about USD 58 per month** for always-on infrastructure and the modeled supporting services. The Cost Explorer export for November 1–17, 2026 shows core infrastructure activity concentrated on November 11–17. Treat that week as representative of a 30-day month. Add USD 1.60 for four stored secrets and scale the other imported usage priced in AWS Pricing Calculator (USD 0.1804 × 30/7, including Secrets Manager API calls). This planning figure excludes ALB LCUs, unverified EventBridge charges, RDS CPU credits, additional backup or snapshot storage, and taxes.
 
 ### Comparing Operating Scenarios
 
