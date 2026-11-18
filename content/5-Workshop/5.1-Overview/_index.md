@@ -14,10 +14,7 @@ Deploy stacks in dependency order, use stack Outputs as subsequent inputs, provi
 
 ## System architecture
 
-The diagram is reused from the Tindy infrastructure repository.
-
-![Tindy AWS architecture](/images/5-Workshop/overview/tindy-architecture.png)
-The additional diagram shows the arrangement of service groups and application components.
+The diagram shows the arrangement of service groups and application components.
 
 ![Additional Tindy architecture diagram](/images/5-Workshop/overview/tindy-architecture-supplement.png)
 

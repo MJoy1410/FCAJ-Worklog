@@ -14,10 +14,7 @@ Sau khi hoàn tất thực hành, người đọc có thể triển khai các st
 
 ## Kiến trúc hệ thống
 
-Sơ đồ dưới được lấy từ repo hạ tầng Tindy.
-
-![Kiến trúc AWS của Tindy](/images/5-Workshop/overview/tindy-architecture.png)
-Sơ đồ bổ sung thể hiện cách bố trí các nhóm dịch vụ và thành phần ứng dụng.
+Sơ đồ thể hiện cách bố trí các nhóm dịch vụ và thành phần ứng dụng.
 
 ![Sơ đồ kiến trúc bổ sung của Tindy](/images/5-Workshop/overview/tindy-architecture-supplement.png)
 
