@@ -121,6 +121,4 @@ Người dùng review kết quả trước khi lưu vào hồ sơ. Điểm Rule-
 | Chứng chỉ | Hướng dẫn thực hành bổ sung; chưa ghi nhận bằng chứng hoàn tất trong các đoạn video đã đối chiếu. |
 | AI PDF | Trạng thái scan hoàn tất, kết quả trích xuất và hồ sơ sau cập nhật. |
 
-Video là bằng chứng demo các luồng đã quay, không thay thế kiểm thử tải, kiểm thử bảo mật hay xác minh toàn bộ ứng dụng. Phần CI/CD ở mục 5.5 đã xác minh federation frontend/backend; không dùng video này để kết luận pipeline đã phát hành một phiên bản ứng dụng mới.
-
 Sau khi hoàn tất nghiệm thu và lưu bằng chứng, thực hiện [5.7 Dọn dẹp tài nguyên](../5.7-Cleanup/) theo kế hoạch vận hành.

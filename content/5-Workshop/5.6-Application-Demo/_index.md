@@ -121,6 +121,4 @@ Review extracted information before saving it. Discovery Rule-based match scores
 | Certificates | Additional practice instructions; completion is not established by the inspected video segments. |
 | AI PDF | Completed scan, extracted suggestions and profile after updating. |
 
-The video demonstrates the recorded flows and does not replace load testing, security testing or comprehensive application verification. Section 5.5 records frontend/backend federation checks. This video does not establish a new application release through CI/CD.
-
 After verification and evidence collection, follow [5.7 Clean up resources](../5.7-Cleanup/) according to the operating plan.
